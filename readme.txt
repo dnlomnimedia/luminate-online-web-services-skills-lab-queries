@@ -1,8 +1,8 @@
 # Basic info for all constituents
 SELECT ConsId, ConsName.FirstName, ConsName.LastName, PrimaryEmail From Constituent
 
-# Basic info for a constituent with email address 'joe.landsman@gmail.com'
-SELECT ConsId, ConsName.FirstName, ConsName.LastName, PrimaryEmail From Constituent WHERE PrimaryEmail = 'joe.landsman@gmail.com'
+# Basic info for an "active" constituent with email address 'joe.landsman@gmail.com'
+SELECT ConsId, ConsName.FirstName, ConsName.LastName, PrimaryEmail From Constituent WHERE PrimaryEmail = 'joe.landsman@gmail.com' and Active = 'ACTIVE'
 
 # Basic info for all constituents in a Group 49504
 SELECT ConsId, ConsName.FirstName, ConsName.LastName, PrimaryEmail From Constituent WHERE GroupId = 49504
